@@ -7,3 +7,10 @@
  */
 
 $animals = array("panda", "alpaca", "boa");
+
+function sortPrint($arr) {
+    sort($arr);
+    print_r($arr);
+}
+
+sortPrint($animals);
