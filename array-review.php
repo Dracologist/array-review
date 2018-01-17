@@ -8,12 +8,24 @@
 
 $animals = array("panda", "alpaca", "boa");
 
-function sortPrint($arr) {
-    sort($arr);
-    foreach ($arr as $item){
+function sortPrint() {
+    global $animals;
+    sort($animals);
+    foreach ($animals as $item){
         echo $item . " ";
     }
     echo "<br>";
 }
 
-sortPrint($animals);
+function add($str) {
+    global $animals;
+    $str = strtolower($str);
+    if(!in_array($str, $animals)){
+        array_push($animals, $str);
+        echo "adding " . $str . "...<br>";
+    }
+}
+
+sortPrint();
+add("Dragon");
+sortPrint();
