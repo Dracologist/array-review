@@ -10,7 +10,10 @@ $animals = array("panda", "alpaca", "boa");
 
 function sortPrint($arr) {
     sort($arr);
-    print_r($arr);
+    foreach ($arr as $item){
+        echo $item . " ";
+    }
+    echo "<br>";
 }
 
 sortPrint($animals);
