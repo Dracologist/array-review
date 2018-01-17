@@ -29,6 +29,10 @@ function add($str) {
     }
 }
 
-sortPrint();
-add("Dragon");
-sortPrint();
+//sortPrint();
+//add("Dragon");
+//sortPrint();
+
+foreach($flavors as $key => $val){
+    echo "<label><input name='flavors[]' type='checkbox' value='" . $key . "' > " . $val . "</label><br>";
+}
